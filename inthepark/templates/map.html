@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>InthePark-Map</title>
+</head>
+<body>
+<div>
+    <img src="/static/img/seoul.jpg" usemap="#seoulmap" border="0">
+    <map id="seoulmap" name="seoulmap">
+        <area shape="rect" alt="도봉구" title="" coords="1043,115,1179,171" onclick="call_ajax()" href="{% url 'posts:lists' '도봉구' %}" target="_self" />
+<!--        localhost:63343/노원구/ 로 접속함-->
+        <area shape="rect" alt="노원구" title="" coords="1209,156,1330,212" onclick="call_ajax()" href="{% url 'posts:lists' '노원구' %}" target="_self" />
+<!--        localhost:63343/testing/강북구/ 로 접속함-->
+        <area shape="rect" alt="강북구" title="" coords="982,205,1126,262" onclick="call_ajax()" href="{% url 'posts:lists' '강북구' %}" target="_self" />
+        <area shape="rect" alt="은평구" title="" coords="634,273,796,323" onclick="call_ajax()" href="{% url 'posts:lists' '은평구' %}" target="_self" />
+        <area shape="rect" alt="서대문구" title="" coords="658,389,831,439" onclick="call_ajax()" href="{% url 'posts:lists' '서대문구' %}" target="_self" />
+        <area shape="rect" alt="종로구" title="" coords="854,366,974,415" onclick="call_ajax()" href="{% url 'posts:lists' '종로구' %}" target="_self" />
+        <area shape="rect" alt="성북구" title="" coords="965,309,1128,358" onclick="call_ajax()" href="{% url 'posts:lists' '성북구' %}" target="_self" />
+        <area shape="rect" alt="중랑구" title="" coords="1259,324,1411,375" onclick="call_ajax()" href="{% url 'posts:lists' '중랑구' %}" target="_self" />
+        <area shape="rect" alt="동대문구" title="" coords="1086,371,1255,418" onclick="call_ajax()" href="{% url 'posts:lists' '동대문구' %}" target="_self" />
+        <area shape="rect" alt="강서구" title="" coords="255,424,394,476" onclick="call_ajax()" href="{% url 'posts:lists' '강서구' %}" target="_self" />
+        <area shape="rect" alt="마포구" title="" coords="612,447,719,499" onclick="call_ajax()" href="{% url 'posts:lists' '마포구' %}" target="_self" />
+        <area shape="rect" alt="중구" title="" coords="921,434,1021,489" onclick="call_ajax()" href="{% url 'posts:lists' '중구' %}" target="_self" />
+        <area shape="rect" alt="성동구" title="" coords="1062,454,1225,510" onclick="call_ajax()" href="{% url 'posts:lists' '성동구' %}" target="_self" />
+        <area shape="rect" alt="광진구" title="" coords="1239,475,1385,522" onclick="call_ajax()" href="{% url 'posts:lists' '광진구' %}" target="_self" />
+        <area shape="rect" alt="강동구" title="" coords="1455,458,1613,513" onclick="call_ajax()" href="{% url 'posts:lists' '강동구' %}" target="_self" />
+        <area shape="rect" alt="용산구" title="" coords="841,507,985,567" onclick="call_ajax()" href="{% url 'posts:lists' '용산구' %}" target="_self" />
+        <area shape="rect" alt="양천구" title="" coords="345,559,512,615" onclick="call_ajax()" href="{% url 'posts:lists' '양천구' %}" target="_self" />
+        <area shape="rect" alt="영등포구" title="" coords="542,546,741,602" onclick="call_ajax()" href="{% url 'posts:lists' '영등포구' %}" target="_self" />
+        <area shape="rect" alt="구로구" title="" coords="389,629,489,683" onclick="call_ajax()" href="{% url 'posts:lists' '구로구' %}" target="_self" />
+        <area shape="rect" alt="동작구" title="" coords="727,607,865,661" onclick="call_ajax()" href="{% url 'posts:lists' '동작구' %}" target="_self" />
+        <area shape="rect" alt="금천구" title="" coords="518,746,701,803" onclick="call_ajax()" href="{% url 'posts:lists' '금천구' %}" target="_self" />
+        <area shape="rect" alt="관악구" title="" coords="716,712,854,767" onclick="call_ajax()" href="{% url 'posts:lists' '관악구' %}" target="_self" />
+        <area shape="rect" alt="서초구" title="" coords="957,665,1084,719" onclick="call_ajax()" href="{% url 'posts:lists' '서초구' %}" target="_self" />
+        <area shape="rect" alt="강남구" title="" coords="1119,633,1273,688" onclick="call_ajax()" href="{% url 'posts:lists' '강남구' %}" target="_self" />
+        <area shape="rect" alt="송파구" title="" coords="1344,591,1476,648" onclick="call_ajax()" href="{% url 'posts:lists' '송파구' %}" target="_self" />
+        <!-- Created by Online Image Map Editor (http://www.maschek.hu/imagemap/index) --></map>
+</div>
+<!-- 이미지맵 끝 -->
+</body>
+</html>

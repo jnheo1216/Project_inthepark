@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+<head>
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="/static/detail/img/fav.png">
+	<!-- Author Meta -->
+	<meta name="author" content="Colorlib">
+	<!-- Meta Description -->
+	<meta name="description" content="">
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="">
+	<!-- meta character set -->
+	<meta charset="UTF-8">
+	<!-- Site Title -->
+	<title>InthePark-Detail</title>
+
+	<!-- detail.html head 가져온 것 -->
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+			integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+			crossorigin="anonymous"></script>
+	<script src="/static/js/detail.js"></script>
+	<!-- 우리는 Bootstrap을 다운로드 방식이 아닌 CDN 방식으로 이용하려고 한다 -->
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+		  crossorigin="anonymous">
+	<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=oi19384r8r"></script>
+
+	<style>
+		.bd-placeholder-img {
+			font-size: 1.125rem;
+			text-anchor: middle;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+
+		@media (min-width: 768px) {
+			.bd-placeholder-img-lg {
+				font-size: 3.5rem;
+			}
+		}
+	</style>
+	<!-- detail.html head 가져온 것 -->
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600" rel="stylesheet">
+		<!--
+		CSS
+		============================================= -->
+		<link rel="stylesheet" href="/static/detail/css/linearicons.css">
+		<link rel="stylesheet" href="/static/detail/css/owl.carousel.css">
+		<link rel="stylesheet" href="/static/detail/css/font-awesome.min.css">
+		<link rel="stylesheet" href="/static/detail/css/nice-select.css">
+		<link rel="stylesheet" href="/static/detail/css/magnific-popup.css">
+		<link rel="stylesheet" href="/static/detail/css/bootstrap.css">
+		<link rel="stylesheet" href="/static/detail/css/main.css">
+
+		    <style>
+				.star-rating {width:304px; }
+				.star-rating,.star-rating span {display:inline-block; height:55px; overflow:hidden;
+				background:url(/static/img/star.png)no-repeat; }
+				.star-rating span{background-position:left bottom; line-height:0; vertical-align:top; }
+			</style>
+	</head>
+	<body style="padding-bottom: 2rem;">
+	<nav class="navbar navbar-expand-sm navbar-white bg-green">
+  <a class="navbar-brand" href="/">In The Park</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExample03">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/map/">Map <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gu list</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown03">
+          <a class="dropdown-item" href="{% url 'posts:lists' '도봉구' %}">도봉구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '노원구' %}">노원구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '강북구' %}">강북구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '은평구' %}">은평구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '서대문구' %}">서대문구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '종로구' %}">종로구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '성북구' %}">성북구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '중랑구' %}">중랑구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '동대문구' %}">동대문구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '강서구' %}">강서구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '마포구' %}">마포구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '중구' %}">중구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '성동구' %}">성동구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '광진구' %}">광진구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '강동구' %}">강동구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '용산구' %}">용산구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '양천구' %}">양천구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '영등포구' %}">영등포구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '구로구' %}">구로구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '동작구' %}">동작구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '금천구' %}">금천구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '관악구' %}">관악구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '서초구' %}">서초구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '강남구' %}">강남구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '송파구' %}">송파구</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+	<!-- ajax 호출 -->
+	<script>
+		$(document).ready(detail_ajax('{{ park_post.p_idx }}'));
+	</script>
+	<!-- ajax 호출 끝 -->
+		<div class="main-wrapper-first">
+			<div class="hero-area relative">
+
+				<div class="banner-area">
+					<div class="overlay hero-overlay-bg"></div>
+					<div class="container">
+						<div class="row height align-items-center justify-content-center">
+							<div class="col-lg-7">
+								<div class="banner-content text-center">
+									<img class="img-fluid" src="/static/detail/img/title-img.png" alt="">
+									<p class="text-white p-2 mb-30" id="myParkname"
+									style="font-size: 50px; font-weight: bold; margin-top: 30px;"></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="main-wrapper">
+			<!-- Start About Top Area -->
+			<section class="about-top-area">
+				<div class="container-fluid">
+					<div class="row h-100 justify-content-start align-items-center">
+						<div class="col-lg-6 about-left">
+							<div class="overlay overlay-bg"></div>
+
+							<!-- 네이버 지도 들어갈 부분 -->
+							<div id="map" style="width:450px;height:360px;"></div>
+
+
+						</div>
+						<div class="col-lg-6 about-right pt-30 pb-30">
+							<div class="single-desc">
+								<span class="icon lnr lnr-rocket"></span>
+								<h2 id="myParkaddr"></h2>
+								<p id="myParkcontents">
+
+								</p>
+							</div>
+							<div class="single-desc">
+								<span class="icon lnr lnr-sun"></span>
+								<h2>주요 시설</h2>
+								<p id="myParkequip">
+
+								</p>
+<!--								<a id="my_map">길찾기로가기</a>-->
+								<input type="button" value="길찾기" class="btn btn-primary" id="my_map"
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- End About Top Area -->
+			<!-- Start Feature Area -->
+			<section class="feature-area pt-90 pb-90">
+				<div class="container">
+					<div>
+						<span style="padding-right: 20px; font-size: 35px;">
+							Comments
+						</span>
+						<span style="padding-right: 20px; font-size: 35px;">
+							|
+						</span>
+						<a href="{% url 'posts:write_post' park_post.p_idx %}"
+						style="font-size: 25px;">
+							댓글쓰러가기
+						</a>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row h-100 align-items-center" style="margin-left: 0px; margin-top: 20px;
+						margin-right: 0px;">
+
+						{% for post in park_post.posts.all %}
+						<div style="padding-left: 10px; padding-right: 10px;
+						padding-bottom: 20px;" id="list">
+							<script>
+									var ratingFunction = function() {
+										var h2 = $("<h2></h2>").text('{{post.author}}').attr('style',
+										'font-size: 25px;')
+										$('#list').append(h2)
+										var starlist = $("<div></div>").attr('id', 'starlist').attr('style',
+										'padding-bottom: 30px;')
+    									var div = $("<div></div>").addClass("wrap-star").attr('style',
+    									'margin-bottom: 20px;')
+    									var in_div = $("<div></div>").addClass("star-rating")
+    									var span = $("<span></span>").attr('id', 'star')
+    									var percent = {{ post.starpoint }} * 20;
+    									span.attr('style', 'width:' + percent + '%');
+    									in_div.append(span)
+    									div.append(in_div)
+    									starlist.append(div)
+    									var p = $("<p></p>").text('{{post.contents}}').attr('style',
+    									'margin-bottom: 30px; font-size: 20px;')
+    									starlist.append(p)
+    									{% if post.images %}
+    									var img = $("<img />").attr({
+    									'src' : '{{post.images.url}}',
+    									'width' : 200,
+    									'height' : 100,
+    									})
+    									starlist.append(img)
+    									{% endif %}
+    									$('#list').append(starlist)
+    								}
+    								ratingFunction();
+								</script>
+<!--							<h2>{{ post.author }}</h2>-->
+<!--							<div id="starlist">-->
+<!--								<p> {{ post.starpoint }} / 5 </p>-->
+<!--								<p>{{ post.contents }}</p>-->
+<!--								{% if post.images %}-->
+<!--								<img src="{{ post.images.url }}" width="200" height="100" />-->
+<!--							{% endif %}-->
+<!--							</div>-->
+						</div>
+						{% empty %}
+						<p>아직 댓글이 없어요</p>
+						{% endfor %}
+					</div>
+				</div>
+			</section>
+			<!-- End Feature Area -->
+
+		</div>
+		<script src="/static/detail/js/vendor/jquery-2.2.4.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+		<script src="/static/detail/js/vendor/bootstrap.min.js"></script>
+		<script src="/static/detail/js/jquery.ajaxchimp.min.js"></script>
+		<script src="/static/detail/js/owl.carousel.min.js"></script>
+		<script src="/static/detail/js/jquery.nice-select.min.js"></script>
+		<script src="/static/detail/js/jquery.magnific-popup.min.js"></script>
+		<script src="/static/detail/js/main.js"></script>
+	</body>
+</html>

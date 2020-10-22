@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>InthePark-List</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>
+    <script src="/static/js/park.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+          crossorigin="anonymous">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="/static/list/images/icons/favicon.ico"/>
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/list/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/list/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/list/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/list/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/list/vendor/perfect-scrollbar/perfect-scrollbar.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/list/css/util.css">
+    <link rel="stylesheet" type="text/css" href="/static/list/css/main.css">
+    <!--===============================================================================================-->
+</head>
+<body>
+<nav class="navbar navbar-expand-sm navbar-white bg-white">
+  <a class="navbar-brand" href="/">In The Park</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExample03">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/map/">Map <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gu list</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown03">
+          <a class="dropdown-item" href="{% url 'posts:lists' '도봉구' %}">도봉구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '노원구' %}">노원구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '강북구' %}">강북구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '은평구' %}">은평구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '서대문구' %}">서대문구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '종로구' %}">종로구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '성북구' %}">성북구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '중랑구' %}">중랑구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '동대문구' %}">동대문구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '강서구' %}">강서구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '마포구' %}">마포구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '중구' %}">중구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '성동구' %}">성동구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '광진구' %}">광진구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '강동구' %}">강동구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '용산구' %}">용산구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '양천구' %}">양천구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '영등포구' %}">영등포구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '구로구' %}">구로구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '동작구' %}">동작구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '금천구' %}">금천구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '관악구' %}">관악구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '서초구' %}">서초구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '강남구' %}">강남구</a>
+          <a class="dropdown-item" href="{% url 'posts:lists' '송파구' %}">송파구</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+<script>
+    $(document).ready(call_ajax('{{ area_name }}'));
+</script>
+<div class="limiter">
+    <div class="container-table100">
+        <div class="wrap-table100">
+            <div class="table100 ver1 m-b-110">
+                <div class="table100-head">
+                    <table>
+                        <thead>
+                        <tr class="row100 head">
+                            <th class="cell100 column1">공원번호</th>
+                            <th class="cell100 column2">대표이미지</th>
+                            <th class="cell100 column3">공원이름</th>
+                            <th class="cell100 column4">공원위치</th>
+                            <th class="cell100 column5">상세정보</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+
+                <div class="table100-body js-pscroll">
+                    <table>
+                        <tbody>
+                        <!--								<tr class="row100 body">-->
+                        <!--									<td class="cell100 column1">Like a butterfly</td>-->
+                        <!--									<td class="cell100 column2">Boxing</td>-->
+                        <!--									<td class="cell100 column3">9:00 AM - 11:00 AM</td>-->
+                        <!--								</tr>-->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--===============================================================================================-->
+<script src="/static/list/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+<script src="/static/list/vendor/bootstrap/js/popper.js"></script>
+<script src="/static/list/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+<script src="/static/list/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+<script src="/static/list/vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+<script>
+    $('.js-pscroll').each(function(){
+        var ps = new PerfectScrollbar(this);
+
+        $(window).on('resize', function(){
+            ps.update();
+        })
+    });
+
+
+</script>
+<!--===============================================================================================-->
+<script src="/static/list/js/main.js"></script>
+
+</body>
+</html>
